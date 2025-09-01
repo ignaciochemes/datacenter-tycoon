@@ -8,6 +8,10 @@ dist/
 build/
 .next/
 out/
+.trae
+
+# Documentation (keep local only)
+docs/
 
 # Environment variables
 .env

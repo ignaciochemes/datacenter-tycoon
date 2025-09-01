@@ -99,6 +99,9 @@ docker-compose up -d
 - 🎮 **Interactive Gameplay**: Engaging game mechanics and progression
 - 📊 **Real-time Analytics**: Live statistics and performance monitoring
 - 🔒 **Security**: JWT-based authentication with Auth0 integration
+- 🛡️ **Network Security**: Firewall rules and load balancer management
+- 📋 **SLA Management**: Service Level Agreement contracts with security integration
+- ⚡ **Real-time Processing**: Tick-based system for continuous evaluation
 - 🎨 **Modern UI**: Responsive design with beautiful components
 - 🚀 **Performance**: Optimized for speed and scalability
 
@@ -114,6 +117,7 @@ docker-compose up -d
 ## 📚 Documentation
 
 - [Monorepo Migration Guide](docs/MONOREPO_MIGRATION.md)
+- [Sprint 3: Network Security Features](docs/SPRINT3_NETWORK_SECURITY.md)
 - [OAuth Integration Status](datacenter-tycoon-front/docs/OAUTH_INTEGRATION_STATUS.md)
 - [API Documentation](datacenter-tycoon-api/README.md)
 - [Frontend Setup](datacenter-tycoon-front/README.md)
@@ -186,14 +190,18 @@ pnpm docker:logs  # View container logs
 - **Rack Management**: Design rack layouts and optimize space utilization
 - **Device Management**: Purchase, install, and maintain various hardware
 - **Hardware Catalog**: Extensive catalog of servers, switches, storage, and more
-- **Real-time Simulation**: Live monitoring of power, cooling, and performance
+- **Network Security**: Configure firewall rules and load balancers for optimal security
+- **SLA Contracts**: Manage service level agreements with automated evaluation
+- **Real-time Simulation**: Live monitoring of power, cooling, performance, and security
 
 ### Technical Features
 - **JWT Authentication**: Secure user authentication and authorization
 - **WebSocket Events**: Real-time updates and notifications
 - **Hardware Seeding**: Automated hardware catalog population
+- **Security Integration**: Firewall and load balancer impact on SLA performance
+- **Tick System**: Automated periodic evaluation of contracts and security
 - **RESTful API**: Comprehensive API with Swagger documentation
-- **Responsive UI**: Modern, mobile-friendly interface
+- **Responsive UI**: Modern, mobile-friendly interface with security dashboards
 
 ## API Endpoints
 
@@ -235,6 +243,33 @@ pnpm docker:logs  # View container logs
 - `GET /api/npc-seeding/stats` - Get NPC catalog statistics
 - `DELETE /api/npc-seeding/clear` - Clear NPC catalog
 - `POST /api/npc-seeding/reseed` - Reseed NPC catalog
+
+### Network Security
+- `GET /api/firewall-rules` - List firewall rules
+- `POST /api/firewall-rules` - Create firewall rule
+- `GET /api/firewall-rules/:id` - Get firewall rule details
+- `PATCH /api/firewall-rules/:id` - Update firewall rule
+- `DELETE /api/firewall-rules/:id` - Delete firewall rule
+- `PATCH /api/firewall-rules/:id/toggle` - Toggle firewall rule status
+
+### Load Balancer Management
+- `GET /api/load-balancers` - List load balancers
+- `POST /api/load-balancers` - Create load balancer
+- `GET /api/load-balancers/:id` - Get load balancer details
+- `PATCH /api/load-balancers/:id` - Update load balancer
+- `DELETE /api/load-balancers/:id` - Delete load balancer
+- `PATCH /api/load-balancers/:id/toggle` - Toggle load balancer status
+- `POST /api/load-balancers/:id/health-check` - Perform health check
+
+### Security Metrics
+- `GET /api/security-metrics/impact/:datacenterId` - Get security impact for datacenter
+- `GET /api/security-metrics/sla-adjustments/:datacenterId` - Get SLA adjustments
+- `GET /api/security-metrics/contract-status/:contractId` - Get contract security status
+- `GET /api/security-metrics/incidents` - Get security incidents
+- `POST /api/security-metrics/incidents/:id/resolve` - Resolve security incident
+- `DELETE /api/security-metrics/incidents/cleanup` - Cleanup resolved incidents
+- `GET /api/security-metrics/dashboard` - Get security dashboard data
+- `GET /api/security-metrics/recommendations` - Get security recommendations
 
 ## Development Guidelines
 

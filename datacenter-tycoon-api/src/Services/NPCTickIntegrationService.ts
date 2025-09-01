@@ -6,8 +6,10 @@ import { TickService, TickData } from './TickService';
 import { NPCDemandGeneratorService } from './NPCDemandGeneratorService';
 import { NPCContractEvaluatorService } from './NPCContractEvaluatorService';
 import { ContractRevenueService } from './ContractRevenueService';
+import { SecurityTickIntegrationService } from './SecurityTickIntegrationService';
 import { NPC } from '../Models/Entities/NPCEntity';
 import { Contract } from '../Models/Entities/ContractEntity';
+import { User } from '../Models/Entities/UserEntity';
 import { ContractStatus } from '../Enums/ServiceEnum';
 
 @Injectable()
@@ -18,17 +20,21 @@ export class NPCTickIntegrationService implements OnModuleInit {
   private readonly CONTRACT_EVALUATION_INTERVAL = 3;
   private readonly CONTRACT_RENEWAL_INTERVAL = 10;
   private readonly REVENUE_PROCESSING_INTERVAL = 30;
+  private readonly SECURITY_EVALUATION_INTERVAL = 7;
 
   constructor(
     private tickService: TickService,
     private npcDemandGenerator: NPCDemandGeneratorService,
     private npcContractEvaluator: NPCContractEvaluatorService,
     private contractRevenueService: ContractRevenueService,
+    private securityTickIntegrationService: SecurityTickIntegrationService,
     private eventEmitter: EventEmitter2,
     @InjectRepository(NPC)
     private npcRepository: Repository<NPC>,
     @InjectRepository(Contract)
     private contractRepository: Repository<Contract>,
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
   ) {}
 
   onModuleInit() {
@@ -64,6 +70,10 @@ export class NPCTickIntegrationService implements OnModuleInit {
 
     if (this.tickCounter % this.REVENUE_PROCESSING_INTERVAL === 0) {
       operations.push(this.processRevenueAndPenalties(tickData));
+    }
+
+    if (this.tickCounter % this.SECURITY_EVALUATION_INTERVAL === 0) {
+      operations.push(this.processSecurityEvaluation(tickData));
     }
 
     operations.push(this.processActiveContracts(tickData));
@@ -236,7 +246,8 @@ export class NPCTickIntegrationService implements OnModuleInit {
         demandGeneration: this.DEMAND_GENERATION_INTERVAL,
         contractEvaluation: this.CONTRACT_EVALUATION_INTERVAL,
         contractRenewal: this.CONTRACT_RENEWAL_INTERVAL,
-        revenueProcessing: this.REVENUE_PROCESSING_INTERVAL
+        revenueProcessing: this.REVENUE_PROCESSING_INTERVAL,
+        securityEvaluation: this.SECURITY_EVALUATION_INTERVAL
       }
     };
   }
@@ -263,11 +274,56 @@ export class NPCTickIntegrationService implements OnModuleInit {
     }
   }
 
+  private async processSecurityEvaluation(tickData: TickData) {
+    this.logger.debug('Processing security evaluations');
+    
+    try {
+      const securityResults = await this.securityTickIntegrationService.processSecurityTick();
+      
+      if (securityResults.length > 0) {
+        this.logger.log(`Processed security evaluation for ${securityResults.length} users`);
+        
+        const totalIncidents = securityResults.reduce((sum, result) => sum + result.securityIncidents.length, 0);
+        const totalAdjustments = securityResults.reduce((sum, result) => sum + result.contractsAdjusted, 0);
+        
+        this.eventEmitter.emit('security-evaluation-processed', {
+          tick: tickData.tickNumber,
+          timestamp: tickData.timestamp,
+          usersProcessed: securityResults.length,
+          totalIncidents,
+          totalAdjustments,
+          results: securityResults.map(result => ({
+            userId: result.userId,
+            firewallRulesProcessed: result.firewallRulesProcessed,
+            loadBalancersProcessed: result.loadBalancersProcessed,
+            contractsAdjusted: result.contractsAdjusted,
+            incidentCount: result.securityIncidents.length,
+            averageSecurityScore: result.performanceMetrics.averageSecurityScore
+          }))
+        });
+        
+        for (const result of securityResults) {
+          if (result.securityIncidents.length > 0) {
+            this.eventEmitter.emit('security-incidents-detected', {
+              tick: tickData.tickNumber,
+              timestamp: tickData.timestamp,
+              userId: result.userId,
+              incidents: result.securityIncidents
+            });
+          }
+        }
+      }
+    } catch (error) {
+      this.logger.error(`Error processing security evaluation: ${error.message}`);
+    }
+  }
+
   async updateIntervals(intervals: {
     demandGeneration?: number;
     contractEvaluation?: number;
     contractRenewal?: number;
     revenueProcessing?: number;
+    securityEvaluation?: number;
   }) {
     if (intervals.demandGeneration) {
       (this as any).DEMAND_GENERATION_INTERVAL = intervals.demandGeneration;
@@ -280,6 +336,9 @@ export class NPCTickIntegrationService implements OnModuleInit {
     }
     if (intervals.revenueProcessing) {
       (this as any).REVENUE_PROCESSING_INTERVAL = intervals.revenueProcessing;
+    }
+    if (intervals.securityEvaluation) {
+      (this as any).SECURITY_EVALUATION_INTERVAL = intervals.securityEvaluation;
     }
 
     this.logger.log('Updated NPC operation intervals', intervals);
