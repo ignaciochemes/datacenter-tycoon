@@ -1,0 +1,166 @@
+[
+  {
+    "id": "npc-enterprise-001",
+    "name": "Global Banking Corporation",
+    "tier": "ENTERPRISE",
+    "status": "ACTIVE",
+    "behaviorType": "QUALITY_FOCUSED",
+    "demandFrequency": "DAILY",
+    "riskTolerance": "VERY_LOW",
+    "monthlyBudget": 75000,
+    "maxContractBudget": 150000,
+    "minUptimeSLA": 99.99,
+    "maxLatencyMs": 10,
+    "minReputationScore": 9.8,
+    "preferredServices": ["database_managed", "firewall_as_service", "ddos_mitigation", "backup", "load_balancer_as_service"],
+    "servicePreferences": {
+      "database_managed": { "priority": 0.35, "maxPrice": 5000 },
+      "firewall_as_service": { "priority": 0.25, "maxPrice": 3000 },
+      "ddos_mitigation": { "priority": 0.2, "maxPrice": 2500 },
+      "backup": { "priority": 0.15, "maxPrice": 2000 },
+      "load_balancer_as_service": { "priority": 0.05, "maxPrice": 1500 }
+    },
+    "evaluationWeights": {
+      "price": 0.1,
+      "sla": 0.5,
+      "reputation": 0.4
+    },
+    "currentReputationScore": 7.2,
+    "demandConfig": {
+      "baseChance": 0.6,
+      "seasonalMultiplier": 0.95,
+      "hourlyMultiplier": 0.8
+    }
+  },
+  {
+    "id": "npc-enterprise-002",
+    "name": "International Logistics Inc",
+    "tier": "ENTERPRISE",
+    "status": "ACTIVE",
+    "behaviorType": "CONSERVATIVE",
+    "demandFrequency": "DAILY",
+    "riskTolerance": "LOW",
+    "monthlyBudget": 45000,
+    "maxContractBudget": 90000,
+    "minUptimeSLA": 99.9,
+    "maxLatencyMs": 25,
+    "minReputationScore": 9.0,
+    "preferredServices": ["kubernetes", "database_managed", "cdn", "backup", "api_hosting"],
+    "servicePreferences": {
+      "kubernetes": { "priority": 0.4, "maxPrice": 4000 },
+      "database_managed": { "priority": 0.25, "maxPrice": 3500 },
+      "cdn": { "priority": 0.15, "maxPrice": 1500 },
+      "backup": { "priority": 0.15, "maxPrice": 1200 },
+      "api_hosting": { "priority": 0.05, "maxPrice": 800 }
+    },
+    "evaluationWeights": {
+      "price": 0.2,
+      "sla": 0.4,
+      "reputation": 0.4
+    },
+    "currentReputationScore": 8.6,
+    "demandConfig": {
+      "baseChance": 0.55,
+      "seasonalMultiplier": 1.1,
+      "hourlyMultiplier": 0.9
+    }
+  },
+  {
+    "id": "npc-enterprise-003",
+    "name": "TechGiant Solutions",
+    "tier": "ENTERPRISE",
+    "status": "ACTIVE",
+    "behaviorType": "BALANCED",
+    "demandFrequency": "DAILY",
+    "riskTolerance": "MEDIUM",
+    "monthlyBudget": 85000,
+    "maxContractBudget": 180000,
+    "minUptimeSLA": 99.95,
+    "maxLatencyMs": 15,
+    "minReputationScore": 8.5,
+    "preferredServices": ["kubernetes", "cdn", "load_balancer_as_service", "ddos_mitigation", "api_hosting"],
+    "servicePreferences": {
+      "kubernetes": { "priority": 0.35, "maxPrice": 6000 },
+      "cdn": { "priority": 0.25, "maxPrice": 3000 },
+      "load_balancer_as_service": { "priority": 0.2, "maxPrice": 2500 },
+      "ddos_mitigation": { "priority": 0.15, "maxPrice": 2000 },
+      "api_hosting": { "priority": 0.05, "maxPrice": 1000 }
+    },
+    "evaluationWeights": {
+      "price": 0.33,
+      "sla": 0.33,
+      "reputation": 0.34
+    },
+    "currentReputationScore": 9.1,
+    "demandConfig": {
+      "baseChance": 0.65,
+      "seasonalMultiplier": 1.2,
+      "hourlyMultiplier": 1.0
+    }
+  },
+  {
+    "id": "npc-enterprise-004",
+    "name": "Healthcare Systems Network",
+    "tier": "ENTERPRISE",
+    "status": "ACTIVE",
+    "behaviorType": "QUALITY_FOCUSED",
+    "demandFrequency": "WEEKLY",
+    "riskTolerance": "VERY_LOW",
+    "monthlyBudget": 65000,
+    "maxContractBudget": 130000,
+    "minUptimeSLA": 99.999,
+    "maxLatencyMs": 5,
+    "minReputationScore": 9.9,
+    "preferredServices": ["database_managed", "backup", "firewall_as_service", "ddos_mitigation"],
+    "servicePreferences": {
+      "database_managed": { "priority": 0.4, "maxPrice": 6000 },
+      "backup": { "priority": 0.3, "maxPrice": 3500 },
+      "firewall_as_service": { "priority": 0.2, "maxPrice": 3000 },
+      "ddos_mitigation": { "priority": 0.1, "maxPrice": 2500 }
+    },
+    "evaluationWeights": {
+      "price": 0.05,
+      "sla": 0.55,
+      "reputation": 0.4
+    },
+    "currentReputationScore": 6.8,
+    "demandConfig": {
+      "baseChance": 0.4,
+      "seasonalMultiplier": 0.9,
+      "hourlyMultiplier": 0.7
+    }
+  },
+  {
+    "id": "npc-enterprise-005",
+    "name": "Media Streaming Platform",
+    "tier": "ENTERPRISE",
+    "status": "ACTIVE",
+    "behaviorType": "AGGRESSIVE",
+    "demandFrequency": "DAILY",
+    "riskTolerance": "MEDIUM",
+    "monthlyBudget": 95000,
+    "maxContractBudget": 200000,
+    "minUptimeSLA": 99.8,
+    "maxLatencyMs": 20,
+    "minReputationScore": 7.5,
+    "preferredServices": ["cdn", "kubernetes", "load_balancer_as_service", "bandwidth", "ddos_mitigation"],
+    "servicePreferences": {
+      "cdn": { "priority": 0.4, "maxPrice": 8000 },
+      "kubernetes": { "priority": 0.25, "maxPrice": 5000 },
+      "load_balancer_as_service": { "priority": 0.15, "maxPrice": 3000 },
+      "bandwidth": { "priority": 0.15, "maxPrice": 4000 },
+      "ddos_mitigation": { "priority": 0.05, "maxPrice": 2000 }
+    },
+    "evaluationWeights": {
+      "price": 0.45,
+      "sla": 0.35,
+      "reputation": 0.2
+    },
+    "currentReputationScore": 8.9,
+    "demandConfig": {
+      "baseChance": 0.7,
+      "seasonalMultiplier": 1.5,
+      "hourlyMultiplier": 1.3
+    }
+  }
+]

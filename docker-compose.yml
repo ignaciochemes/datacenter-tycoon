@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: datacenter-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: datacenter_tycoon
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./datacenter-tycoon-api/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - datacenter-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: datacenter-redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+    networks:
+      - datacenter-network
+
+  adminer:
+    image: adminer:latest
+    container_name: datacenter-adminer
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    networks:
+      - datacenter-network
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  datacenter-network:
+    driver: bridge

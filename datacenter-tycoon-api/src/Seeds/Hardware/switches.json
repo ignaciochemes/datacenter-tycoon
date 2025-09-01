@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sw-001",
+    "name": "Cisco Catalyst 9300-48P",
+    "type": "SWITCH",
+    "manufacturer": "Cisco",
+    "model": "Catalyst 9300-48P",
+    "description": "48-port Gigabit Ethernet switch with PoE+",
+    "specifications": {
+      "ports": "48x 1GbE PoE+ + 4x 10GbE SFP+",
+      "switching_capacity": "176 Gbps",
+      "forwarding_rate": "130.95 Mpps",
+      "poe_budget": "740W",
+      "management": "Cisco DNA Center ready"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 95,
+    "price": 3500,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "sw-002",
+    "name": "Arista 7050SX3-48YC8",
+    "type": "SWITCH",
+    "manufacturer": "Arista",
+    "model": "7050SX3-48YC8",
+    "description": "48-port 25GbE + 8-port 100GbE top-of-rack switch",
+    "specifications": {
+      "ports": "48x 25GbE SFP28 + 8x 100GbE QSFP28",
+      "switching_capacity": "2.56 Tbps",
+      "forwarding_rate": "1904.76 Mpps",
+      "latency": "550ns",
+      "management": "CloudVision Portal"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 180,
+    "price": 15000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "sw-003",
+    "name": "Juniper EX4300-48P",
+    "type": "SWITCH",
+    "manufacturer": "Juniper",
+    "model": "EX4300-48P",
+    "description": "48-port Gigabit Ethernet switch with Virtual Chassis",
+    "specifications": {
+      "ports": "48x 1GbE PoE+ + 4x 40GbE QSFP+",
+      "switching_capacity": "256 Gbps",
+      "forwarding_rate": "190.48 Mpps",
+      "poe_budget": "740W",
+      "management": "Junos Space Network Director"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 110,
+    "price": 4200,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "sw-004",
+    "name": "HPE FlexNetwork 5130 EI",
+    "type": "SWITCH",
+    "manufacturer": "HPE",
+    "model": "FlexNetwork 5130-48G-PoE+-4SFP+ EI",
+    "description": "48-port Gigabit PoE+ switch for SMB",
+    "specifications": {
+      "ports": "48x 1GbE PoE+ + 4x 10GbE SFP+",
+      "switching_capacity": "176 Gbps",
+      "forwarding_rate": "130.95 Mpps",
+      "poe_budget": "370W",
+      "management": "IMC PLAT 7.3"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 85,
+    "price": 2800,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "sw-005",
+    "name": "Mellanox SN3700C",
+    "type": "SWITCH",
+    "manufacturer": "Mellanox",
+    "model": "SN3700C-S2M2PC",
+    "description": "32-port 100GbE spine switch for data center fabric",
+    "specifications": {
+      "ports": "32x 100GbE QSFP28",
+      "switching_capacity": "6.4 Tbps",
+      "forwarding_rate": "4761.9 Mpps",
+      "latency": "300ns",
+      "management": "Onyx Network OS"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 250,
+    "price": 28000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "sw-006",
+    "name": "Netgear M4300-24X",
+    "type": "SWITCH",
+    "manufacturer": "Netgear",
+    "model": "M4300-24X",
+    "description": "24-port 10GbE managed switch for SMB",
+    "specifications": {
+      "ports": "24x 10GbE SFP+ + 4x 40GbE QSFP+",
+      "switching_capacity": "480 Gbps",
+      "forwarding_rate": "357.14 Mpps",
+      "poe_budget": "0W",
+      "management": "Web GUI, CLI, SNMP"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 120,
+    "price": 1800,
+    "availability": true,
+    "category": "standard"
+  }
+]

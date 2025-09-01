@@ -1,0 +1,122 @@
+[
+  {
+    "id": "mon-001",
+    "name": "APC NetBotz 455",
+    "type": "MONITORING",
+    "manufacturer": "APC by Schneider Electric",
+    "model": "NBRK0455",
+    "description": "Rack monitoring appliance with environmental sensors",
+    "specifications": {
+      "sensors": "Temperature, humidity, airflow, vibration, sound",
+      "camera": "Built-in surveillance camera with motion detection",
+      "connectivity": "Ethernet, Wi-Fi, cellular (optional)",
+      "alerts": "Email, SMS, SNMP traps, syslog",
+      "features": "Web interface, mobile app, integration APIs"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 25,
+    "price": 1800,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "mon-002",
+    "name": "Vertiv Geist IMD-3000",
+    "type": "MONITORING",
+    "manufacturer": "Vertiv",
+    "model": "IMD-3000",
+    "description": "Intelligent monitoring device for power and environment",
+    "specifications": {
+      "sensors": "8x temp/humidity, 4x contact closure, 2x 4-20mA",
+      "power_monitoring": "3-phase power metering, PUE calculation",
+      "connectivity": "Dual Ethernet, RS-485, USB",
+      "alerts": "Email, SNMP, Modbus, BACnet",
+      "features": "Web GUI, REST API, data logging"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 15,
+    "price": 2200,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "mon-003",
+    "name": "Raritan EMX2",
+    "type": "MONITORING",
+    "manufacturer": "Raritan",
+    "model": "EMX2-111",
+    "description": "Environmental monitoring system with smart sensors",
+    "specifications": {
+      "sensors": "Daisy-chain up to 500 sensors",
+      "types": "Temperature, humidity, pressure, airflow, contact",
+      "connectivity": "Ethernet, serial, USB",
+      "alerts": "Email, SNMP, syslog, webhook",
+      "features": "DCIM integration, mobile app, analytics"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 12,
+    "price": 1500,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "mon-004",
+    "name": "Panduit SmartZone G5",
+    "type": "MONITORING",
+    "manufacturer": "Panduit",
+    "model": "PZGM6000",
+    "description": "Intelligent PDU with per-outlet monitoring",
+    "specifications": {
+      "outlets": "24x C13 + 6x C19 outlets",
+      "monitoring": "Per-outlet current, voltage, power, energy",
+      "connectivity": "Ethernet, serial, USB, optional cellular",
+      "alerts": "Email, SNMP, syslog, LED indicators",
+      "features": "Remote switching, load balancing, trending"
+    },
+    "rackUnits": 0,
+    "powerConsumption": 8,
+    "price": 3500,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "mon-005",
+    "name": "Nlyte DCIM Software",
+    "type": "MONITORING",
+    "manufacturer": "Nlyte Software",
+    "model": "DCIM Enterprise",
+    "description": "Comprehensive data center infrastructure management",
+    "specifications": {
+      "features": "Asset management, capacity planning, energy monitoring",
+      "integration": "SNMP, Modbus, BACnet, REST APIs",
+      "analytics": "PUE tracking, thermal mapping, predictive analytics",
+      "reporting": "Custom dashboards, automated reports, alerts",
+      "deployment": "On-premises or cloud-based"
+    },
+    "rackUnits": 0,
+    "powerConsumption": 0,
+    "price": 25000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "mon-006",
+    "name": "Schneider EcoStruxure IT",
+    "type": "MONITORING",
+    "manufacturer": "Schneider Electric",
+    "model": "EcoStruxure IT Expert",
+    "description": "Cloud-based infrastructure monitoring and management",
+    "specifications": {
+      "monitoring": "UPS, PDU, cooling, environmental sensors",
+      "analytics": "Predictive insights, health scores, recommendations",
+      "integration": "APC devices, third-party via APIs",
+      "alerts": "Mobile app, email, SMS, dashboard",
+      "features": "Remote access, automated reports, capacity planning"
+    },
+    "rackUnits": 0,
+    "powerConsumption": 0,
+    "price": 15000,
+    "availability": true,
+    "category": "enterprise"
+  }
+]

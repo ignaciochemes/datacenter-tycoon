@@ -1,0 +1,156 @@
+[
+  {
+    "id": "npc-startup-001",
+    "name": "TechFlow Solutions",
+    "tier": "STARTUP",
+    "status": "ACTIVE",
+    "behaviorType": "AGGRESSIVE",
+    "demandFrequency": "WEEKLY",
+    "riskTolerance": "HIGH",
+    "monthlyBudget": 2500,
+    "maxContractBudget": 5000,
+    "minUptimeSLA": 99.0,
+    "maxLatencyMs": 200,
+    "minReputationScore": 6.0,
+    "preferredServices": ["web_hosting", "api_hosting", "backup"],
+    "servicePreferences": {
+      "web_hosting": { "priority": 0.4, "maxPrice": 150 },
+      "api_hosting": { "priority": 0.35, "maxPrice": 200 },
+      "backup": { "priority": 0.25, "maxPrice": 80 }
+    },
+    "evaluationWeights": {
+      "price": 0.5,
+      "sla": 0.3,
+      "reputation": 0.2
+    },
+    "currentReputationScore": 7.2,
+    "demandConfig": {
+      "baseChance": 0.3,
+      "seasonalMultiplier": 1.2,
+      "hourlyMultiplier": 1.0
+    }
+  },
+  {
+    "id": "npc-startup-002",
+    "name": "CloudNinja Labs",
+    "tier": "STARTUP",
+    "status": "ACTIVE",
+    "behaviorType": "BALANCED",
+    "demandFrequency": "WEEKLY",
+    "riskTolerance": "MEDIUM",
+    "monthlyBudget": 1800,
+    "maxContractBudget": 3500,
+    "minUptimeSLA": 99.5,
+    "maxLatencyMs": 150,
+    "minReputationScore": 7.0,
+    "preferredServices": ["web_hosting", "cdn", "backup"],
+    "servicePreferences": {
+      "web_hosting": { "priority": 0.5, "maxPrice": 120 },
+      "cdn": { "priority": 0.3, "maxPrice": 100 },
+      "backup": { "priority": 0.2, "maxPrice": 60 }
+    },
+    "evaluationWeights": {
+      "price": 0.33,
+      "sla": 0.33,
+      "reputation": 0.34
+    },
+    "currentReputationScore": 8.1,
+    "demandConfig": {
+      "baseChance": 0.25,
+      "seasonalMultiplier": 1.1,
+      "hourlyMultiplier": 1.0
+    }
+  },
+  {
+    "id": "npc-startup-003",
+    "name": "DataStream Innovations",
+    "tier": "STARTUP",
+    "status": "ACTIVE",
+    "behaviorType": "CONSERVATIVE",
+    "demandFrequency": "BIWEEKLY",
+    "riskTolerance": "LOW",
+    "monthlyBudget": 3200,
+    "maxContractBudget": 6000,
+    "minUptimeSLA": 99.8,
+    "maxLatencyMs": 100,
+    "minReputationScore": 8.5,
+    "preferredServices": ["api_hosting", "database_managed", "backup"],
+    "servicePreferences": {
+      "api_hosting": { "priority": 0.4, "maxPrice": 250 },
+      "database_managed": { "priority": 0.4, "maxPrice": 300 },
+      "backup": { "priority": 0.2, "maxPrice": 100 }
+    },
+    "evaluationWeights": {
+      "price": 0.2,
+      "sla": 0.4,
+      "reputation": 0.4
+    },
+    "currentReputationScore": 6.8,
+    "demandConfig": {
+      "baseChance": 0.2,
+      "seasonalMultiplier": 1.0,
+      "hourlyMultiplier": 0.9
+    }
+  },
+  {
+    "id": "npc-startup-004",
+    "name": "ByteCraft Studios",
+    "tier": "STARTUP",
+    "status": "ACTIVE",
+    "behaviorType": "AGGRESSIVE",
+    "demandFrequency": "WEEKLY",
+    "riskTolerance": "HIGH",
+    "monthlyBudget": 1500,
+    "maxContractBudget": 2800,
+    "minUptimeSLA": 98.5,
+    "maxLatencyMs": 250,
+    "minReputationScore": 5.5,
+    "preferredServices": ["web_hosting", "cdn"],
+    "servicePreferences": {
+      "web_hosting": { "priority": 0.7, "maxPrice": 100 },
+      "cdn": { "priority": 0.3, "maxPrice": 80 }
+    },
+    "evaluationWeights": {
+      "price": 0.6,
+      "sla": 0.25,
+      "reputation": 0.15
+    },
+    "currentReputationScore": 7.5,
+    "demandConfig": {
+      "baseChance": 0.35,
+      "seasonalMultiplier": 1.3,
+      "hourlyMultiplier": 1.1
+    }
+  },
+  {
+    "id": "npc-startup-005",
+    "name": "NextGen Analytics",
+    "tier": "STARTUP",
+    "status": "ACTIVE",
+    "behaviorType": "QUALITY_FOCUSED",
+    "demandFrequency": "BIWEEKLY",
+    "riskTolerance": "MEDIUM",
+    "monthlyBudget": 2800,
+    "maxContractBudget": 5500,
+    "minUptimeSLA": 99.9,
+    "maxLatencyMs": 80,
+    "minReputationScore": 8.0,
+    "preferredServices": ["api_hosting", "database_managed", "backup"],
+    "servicePreferences": {
+      "api_hosting": { "priority": 0.45, "maxPrice": 300 },
+      "database_managed": { "priority": 0.35, "maxPrice": 350 },
+      "backup": { "priority": 0.2, "maxPrice": 120 }
+    },
+    "evaluationWeights": {
+      "price": 0.15,
+      "sla": 0.45,
+      "reputation": 0.4
+    },
+    "currentReputationScore": 8.7,
+    "demandConfig": {
+      "baseChance": 0.22,
+      "seasonalMultiplier": 1.0,
+      "hourlyMultiplier": 0.95
+    }
+  }
+]

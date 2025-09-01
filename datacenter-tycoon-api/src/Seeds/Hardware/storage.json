@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sto-001",
+    "name": "Dell EMC PowerStore 500",
+    "type": "STORAGE",
+    "manufacturer": "Dell EMC",
+    "model": "PowerStore 500",
+    "description": "All-flash storage array with container-based architecture",
+    "specifications": {
+      "capacity": "46TB effective",
+      "performance": "150K IOPS, 2.2GB/s throughput",
+      "drives": "12x 3.84TB NVMe SSD",
+      "connectivity": "4x 25GbE iSCSI + 4x 32Gb FC",
+      "features": "Inline deduplication, compression, snapshots"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 350,
+    "price": 85000,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "sto-002",
+    "name": "NetApp AFF A400",
+    "type": "STORAGE",
+    "manufacturer": "NetApp",
+    "model": "AFF A400",
+    "description": "All-flash FAS system for hybrid cloud environments",
+    "specifications": {
+      "capacity": "368TB raw",
+      "performance": "460K IOPS, 6.78GB/s throughput",
+      "drives": "24x 15.36TB NVMe SSD",
+      "connectivity": "4x 100GbE + 4x 32Gb FC",
+      "features": "ONTAP OS, SnapMirror, FlexClone, QoS"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 480,
+    "price": 120000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "sto-003",
+    "name": "HPE Nimble Storage HF20",
+    "type": "STORAGE",
+    "manufacturer": "HPE",
+    "model": "Nimble Storage HF20",
+    "description": "Hybrid flash array with predictive analytics",
+    "specifications": {
+      "capacity": "84TB effective",
+      "performance": "100K IOPS, 1.5GB/s throughput",
+      "drives": "6x 3.84TB SSD + 15x 4TB HDD",
+      "connectivity": "4x 10GbE iSCSI + 2x 16Gb FC",
+      "features": "InfoSight analytics, snapshots, replication"
+    },
+    "rackUnits": 3,
+    "powerConsumption": 420,
+    "price": 65000,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "sto-004",
+    "name": "Pure Storage FlashArray//X70",
+    "type": "STORAGE",
+    "manufacturer": "Pure Storage",
+    "model": "FlashArray//X70",
+    "description": "DirectFlash all-NVMe storage array",
+    "specifications": {
+      "capacity": "668TB effective",
+      "performance": "1.5M IOPS, 23GB/s throughput",
+      "drives": "20x DirectFlash modules",
+      "connectivity": "8x 32Gb FC + 4x 100GbE",
+      "features": "Purity OS, SafeMode snapshots, CloudSnap"
+    },
+    "rackUnits": 3,
+    "powerConsumption": 650,
+    "price": 180000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "sto-005",
+    "name": "Synology RackStation RS4021xs+",
+    "type": "STORAGE",
+    "manufacturer": "Synology",
+    "model": "RackStation RS4021xs+",
+    "description": "16-bay NAS for small to medium businesses",
+    "specifications": {
+      "capacity": "288TB raw (16x 18TB drives)",
+      "performance": "4.5K IOPS, 2.3GB/s throughput",
+      "drives": "16x 3.5\" SATA bays",
+      "connectivity": "4x GbE + 2x 10GbE SFP+",
+      "features": "DSM OS, Snapshot Replication, SSD cache"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 180,
+    "price": 8500,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "sto-006",
+    "name": "QNAP TS-1685",
+    "type": "STORAGE",
+    "manufacturer": "QNAP",
+    "model": "TS-1685",
+    "description": "16-bay rackmount NAS with 10GbE connectivity",
+    "specifications": {
+      "capacity": "320TB raw (16x 20TB drives)",
+      "performance": "3.8K IOPS, 1.6GB/s throughput",
+      "drives": "12x 3.5\" + 4x 2.5\" bays",
+      "connectivity": "4x GbE + 2x 10GbE SFP+",
+      "features": "QTS OS, Qtier auto-tiering, Qsync"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 150,
+    "price": 6800,
+    "availability": true,
+    "category": "standard"
+  }
+]

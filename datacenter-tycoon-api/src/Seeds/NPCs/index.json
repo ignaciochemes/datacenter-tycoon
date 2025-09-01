@@ -1,0 +1,70 @@
+{
+  "catalogs": {
+    "startup": "./startup.json",
+    "sme": "./sme.json",
+    "enterprise": "./enterprise.json",
+    "government": "./government.json"
+  },
+  "tiers": {
+    "STARTUP": {
+      "description": "Small startups with limited budgets and basic requirements",
+      "budgetRange": "$500 - $5,000",
+      "typicalServices": ["web_hosting", "api_hosting", "backup"],
+      "riskTolerance": "HIGH",
+      "demandFrequency": "WEEKLY"
+    },
+    "SME": {
+      "description": "Small to medium enterprises with moderate budgets",
+      "budgetRange": "$2,000 - $20,000",
+      "typicalServices": ["web_hosting", "api_hosting", "database_managed", "cdn", "backup"],
+      "riskTolerance": "MEDIUM",
+      "demandFrequency": "BIWEEKLY"
+    },
+    "ENTERPRISE": {
+      "description": "Large enterprises with substantial budgets and strict requirements",
+      "budgetRange": "$10,000 - $100,000",
+      "typicalServices": ["kubernetes", "database_managed", "cdn", "ddos_mitigation", "load_balancer_as_service"],
+      "riskTolerance": "LOW",
+      "demandFrequency": "DAILY"
+    },
+    "GOVERNMENT": {
+      "description": "Government agencies with high security and compliance requirements",
+      "budgetRange": "$20,000 - $500,000",
+      "typicalServices": ["colocation", "housing", "firewall_as_service", "ddos_mitigation", "backup"],
+      "riskTolerance": "VERY_LOW",
+      "demandFrequency": "MONTHLY"
+    }
+  },
+  "behaviorTypes": {
+    "CONSERVATIVE": {
+      "description": "Prefers established providers with high reputation",
+      "priceWeight": 0.2,
+      "slaWeight": 0.4,
+      "reputationWeight": 0.4
+    },
+    "BALANCED": {
+      "description": "Balances price, SLA, and reputation equally",
+      "priceWeight": 0.33,
+      "slaWeight": 0.33,
+      "reputationWeight": 0.34
+    },
+    "AGGRESSIVE": {
+      "description": "Focuses primarily on price with acceptable quality",
+      "priceWeight": 0.5,
+      "slaWeight": 0.3,
+      "reputationWeight": 0.2
+    },
+    "QUALITY_FOCUSED": {
+      "description": "Prioritizes SLA and reputation over price",
+      "priceWeight": 0.15,
+      "slaWeight": 0.45,
+      "reputationWeight": 0.4
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2024-01-31",
+    "totalNPCs": 100,
+    "description": "NPC catalog for datacenter tycoon game with realistic business profiles"
+  }
+}

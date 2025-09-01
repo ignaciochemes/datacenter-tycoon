@@ -1,0 +1,58 @@
+{
+  "name": "datacenter-tycoon",
+  "version": "1.0.0",
+  "description": "Datacenter Tycoon - Full Stack Game Application",
+  "private": true,
+  "workspaces": [
+    "datacenter-tycoon-api",
+    "datacenter-tycoon-front",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "clean": "turbo run clean",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "api:typeorm": "pnpm --filter datacenter-tycoon-api typeorm:win:local",
+    "api:dev": "pnpm --filter datacenter-tycoon-api dev",
+    "api:build": "pnpm --filter datacenter-tycoon-api build",
+    "api:start": "pnpm --filter datacenter-tycoon-api start",
+    "front:dev": "pnpm --filter datacenter-tycoon-front dev",
+    "front:build": "pnpm --filter datacenter-tycoon-front build",
+    "front:start": "pnpm --filter datacenter-tycoon-front start",
+    "install:all": "pnpm install",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/datacenter-tycoon.git"
+  },
+  "keywords": [
+    "datacenter",
+    "tycoon",
+    "game",
+    "nestjs",
+    "nextjs",
+    "typescript",
+    "monorepo"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

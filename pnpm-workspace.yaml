@@ -1,0 +1,4 @@
+packages:
+  - "datacenter-tycoon-api"
+  - "datacenter-tycoon-front"
+  - "packages/*"

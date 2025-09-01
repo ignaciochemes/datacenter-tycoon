@@ -1,0 +1,164 @@
+[
+  {
+    "id": "npc-gov-001",
+    "name": "Department of Digital Services",
+    "tier": "GOVERNMENT",
+    "status": "ACTIVE",
+    "behaviorType": "QUALITY_FOCUSED",
+    "demandFrequency": "MONTHLY",
+    "riskTolerance": "VERY_LOW",
+    "monthlyBudget": 150000,
+    "maxContractBudget": 500000,
+    "minUptimeSLA": 99.999,
+    "maxLatencyMs": 5,
+    "minReputationScore": 9.9,
+    "preferredServices": ["colocation", "housing", "firewall_as_service", "ddos_mitigation", "backup"],
+    "servicePreferences": {
+      "colocation": { "priority": 0.35, "maxPrice": 15000 },
+      "housing": { "priority": 0.25, "maxPrice": 12000 },
+      "firewall_as_service": { "priority": 0.2, "maxPrice": 8000 },
+      "ddos_mitigation": { "priority": 0.15, "maxPrice": 6000 },
+      "backup": { "priority": 0.05, "maxPrice": 4000 }
+    },
+    "evaluationWeights": {
+      "price": 0.05,
+      "sla": 0.6,
+      "reputation": 0.35
+    },
+    "currentReputationScore": 7.5,
+    "demandConfig": {
+      "baseChance": 0.8,
+      "seasonalMultiplier": 0.8,
+      "hourlyMultiplier": 0.6
+    }
+  },
+  {
+    "id": "npc-gov-002",
+    "name": "National Security Agency",
+    "tier": "GOVERNMENT",
+    "status": "ACTIVE",
+    "behaviorType": "CONSERVATIVE",
+    "demandFrequency": "MONTHLY",
+    "riskTolerance": "VERY_LOW",
+    "monthlyBudget": 250000,
+    "maxContractBudget": 800000,
+    "minUptimeSLA": 99.9999,
+    "maxLatencyMs": 2,
+    "minReputationScore": 10.0,
+    "preferredServices": ["housing", "firewall_as_service", "ddos_mitigation", "backup"],
+    "servicePreferences": {
+      "housing": { "priority": 0.4, "maxPrice": 25000 },
+      "firewall_as_service": { "priority": 0.3, "maxPrice": 15000 },
+      "ddos_mitigation": { "priority": 0.2, "maxPrice": 12000 },
+      "backup": { "priority": 0.1, "maxPrice": 8000 }
+    },
+    "evaluationWeights": {
+      "price": 0.02,
+      "sla": 0.65,
+      "reputation": 0.33
+    },
+    "currentReputationScore": 6.2,
+    "demandConfig": {
+      "baseChance": 0.9,
+      "seasonalMultiplier": 0.7,
+      "hourlyMultiplier": 0.5
+    }
+  },
+  {
+    "id": "npc-gov-003",
+    "name": "Public Health Information System",
+    "tier": "GOVERNMENT",
+    "status": "ACTIVE",
+    "behaviorType": "QUALITY_FOCUSED",
+    "demandFrequency": "BIWEEKLY",
+    "riskTolerance": "VERY_LOW",
+    "monthlyBudget": 120000,
+    "maxContractBudget": 400000,
+    "minUptimeSLA": 99.99,
+    "maxLatencyMs": 8,
+    "minReputationScore": 9.5,
+    "preferredServices": ["database_managed", "backup", "firewall_as_service", "colocation"],
+    "servicePreferences": {
+      "database_managed": { "priority": 0.4, "maxPrice": 12000 },
+      "backup": { "priority": 0.25, "maxPrice": 8000 },
+      "firewall_as_service": { "priority": 0.2, "maxPrice": 6000 },
+      "colocation": { "priority": 0.15, "maxPrice": 10000 }
+    },
+    "evaluationWeights": {
+      "price": 0.1,
+      "sla": 0.55,
+      "reputation": 0.35
+    },
+    "currentReputationScore": 8.1,
+    "demandConfig": {
+      "baseChance": 0.7,
+      "seasonalMultiplier": 0.9,
+      "hourlyMultiplier": 0.7
+    }
+  },
+  {
+    "id": "npc-gov-004",
+    "name": "Municipal IT Services",
+    "tier": "GOVERNMENT",
+    "status": "ACTIVE",
+    "behaviorType": "CONSERVATIVE",
+    "demandFrequency": "MONTHLY",
+    "riskTolerance": "LOW",
+    "monthlyBudget": 80000,
+    "maxContractBudget": 250000,
+    "minUptimeSLA": 99.9,
+    "maxLatencyMs": 15,
+    "minReputationScore": 9.0,
+    "preferredServices": ["web_hosting", "database_managed", "backup", "firewall_as_service"],
+    "servicePreferences": {
+      "web_hosting": { "priority": 0.3, "maxPrice": 3000 },
+      "database_managed": { "priority": 0.35, "maxPrice": 8000 },
+      "backup": { "priority": 0.2, "maxPrice": 5000 },
+      "firewall_as_service": { "priority": 0.15, "maxPrice": 4000 }
+    },
+    "evaluationWeights": {
+      "price": 0.15,
+      "sla": 0.45,
+      "reputation": 0.4
+    },
+    "currentReputationScore": 8.7,
+    "demandConfig": {
+      "baseChance": 0.6,
+      "seasonalMultiplier": 0.85,
+      "hourlyMultiplier": 0.8
+    }
+  },
+  {
+    "id": "npc-gov-005",
+    "name": "Emergency Response Coordination",
+    "tier": "GOVERNMENT",
+    "status": "ACTIVE",
+    "behaviorType": "QUALITY_FOCUSED",
+    "demandFrequency": "WEEKLY",
+    "riskTolerance": "VERY_LOW",
+    "monthlyBudget": 180000,
+    "maxContractBudget": 600000,
+    "minUptimeSLA": 99.999,
+    "maxLatencyMs": 3,
+    "minReputationScore": 9.8,
+    "preferredServices": ["housing", "ddos_mitigation", "firewall_as_service", "backup", "load_balancer_as_service"],
+    "servicePreferences": {
+      "housing": { "priority": 0.35, "maxPrice": 20000 },
+      "ddos_mitigation": { "priority": 0.25, "maxPrice": 15000 },
+      "firewall_as_service": { "priority": 0.2, "maxPrice": 12000 },
+      "backup": { "priority": 0.15, "maxPrice": 8000 },
+      "load_balancer_as_service": { "priority": 0.05, "maxPrice": 5000 }
+    },
+    "evaluationWeights": {
+      "price": 0.03,
+      "sla": 0.62,
+      "reputation": 0.35
+    },
+    "currentReputationScore": 7.9,
+    "demandConfig": {
+      "baseChance": 0.85,
+      "seasonalMultiplier": 1.0,
+      "hourlyMultiplier": 0.9
+    }
+  }
+]

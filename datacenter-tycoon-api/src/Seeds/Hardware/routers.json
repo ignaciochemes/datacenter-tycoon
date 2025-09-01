@@ -1,0 +1,122 @@
+[
+  {
+    "id": "rtr-001",
+    "name": "Cisco ASR 1001-X",
+    "type": "ROUTER",
+    "manufacturer": "Cisco",
+    "model": "ASR 1001-X",
+    "description": "Enterprise edge router with integrated services",
+    "specifications": {
+      "throughput": "20 Gbps",
+      "interfaces": "6x 1GbE + 2x 10GbE SFP+",
+      "routing_table": "1M IPv4 routes",
+      "vpn_tunnels": "16000 IPsec tunnels",
+      "features": "MPLS, BGP, OSPF, QoS, Firewall"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 200,
+    "price": 12000,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "rtr-002",
+    "name": "Juniper MX204",
+    "type": "ROUTER",
+    "manufacturer": "Juniper",
+    "model": "MX204",
+    "description": "Universal routing platform for service providers",
+    "specifications": {
+      "throughput": "400 Gbps",
+      "interfaces": "8x 100GbE QSFP28",
+      "routing_table": "2M IPv4 routes",
+      "vpn_tunnels": "64000 L3VPN tunnels",
+      "features": "MPLS, Segment Routing, EVPN, Timing"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 450,
+    "price": 45000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "rtr-003",
+    "name": "HPE FlexNetwork MSR3012",
+    "type": "ROUTER",
+    "manufacturer": "HPE",
+    "model": "FlexNetwork MSR3012",
+    "description": "Multi-service router for branch offices",
+    "specifications": {
+      "throughput": "2 Gbps",
+      "interfaces": "2x GbE + 4x Fast Ethernet + 2x SFP",
+      "routing_table": "64K IPv4 routes",
+      "vpn_tunnels": "200 IPsec tunnels",
+      "features": "OSPF, BGP, RIP, NAT, Firewall"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 45,
+    "price": 2500,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "rtr-004",
+    "name": "Arista 7280R3-32P4",
+    "type": "ROUTER",
+    "manufacturer": "Arista",
+    "model": "7280R3-32P4",
+    "description": "High-performance spine router for data centers",
+    "specifications": {
+      "throughput": "2.56 Tbps",
+      "interfaces": "32x 100GbE QSFP28 + 4x 400GbE QSFP-DD",
+      "routing_table": "1M IPv4 routes",
+      "vpn_tunnels": "32000 VXLAN tunnels",
+      "features": "BGP, OSPF, VXLAN, EVPN, Segment Routing"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 380,
+    "price": 65000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "rtr-005",
+    "name": "Mikrotik CCR2004-16G-2S+",
+    "type": "ROUTER",
+    "manufacturer": "Mikrotik",
+    "model": "CCR2004-16G-2S+",
+    "description": "Cloud core router for ISPs and WISPs",
+    "specifications": {
+      "throughput": "16 Gbps",
+      "interfaces": "16x GbE + 2x 10GbE SFP+",
+      "routing_table": "1M IPv4 routes",
+      "vpn_tunnels": "2000 IPsec tunnels",
+      "features": "OSPF, BGP, MPLS, Hotspot, User Manager"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 65,
+    "price": 800,
+    "availability": true,
+    "category": "budget"
+  },
+  {
+    "id": "rtr-006",
+    "name": "Huawei NE40E-X8A",
+    "type": "ROUTER",
+    "manufacturer": "Huawei",
+    "model": "NE40E-X8A",
+    "description": "Carrier-grade edge router with AI capabilities",
+    "specifications": {
+      "throughput": "800 Gbps",
+      "interfaces": "8x 100GbE QSFP28 + 32x 25GbE SFP28",
+      "routing_table": "4M IPv4 routes",
+      "vpn_tunnels": "128000 L3VPN tunnels",
+      "features": "SR-MPLS, SRv6, EVPN, Telemetry, AI QoS"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 520,
+    "price": 55000,
+    "availability": true,
+    "category": "premium"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "srv-001",
+    "name": "Dell PowerEdge R740",
+    "type": "SERVER",
+    "manufacturer": "Dell",
+    "model": "PowerEdge R740",
+    "description": "2U rack server with dual Intel Xeon processors",
+    "specifications": {
+      "cpu": "2x Intel Xeon Silver 4214R (2.4GHz, 12-core)",
+      "ram": "64GB DDR4 ECC",
+      "storage": "2x 1TB SSD + 4x 2TB HDD",
+      "network": "4x 1GbE + 2x 10GbE SFP+",
+      "powerSupply": "2x 750W redundant PSU"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 450,
+    "price": 8500,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "srv-002",
+    "name": "HPE ProLiant DL380 Gen10",
+    "type": "SERVER",
+    "manufacturer": "HPE",
+    "model": "ProLiant DL380 Gen10",
+    "description": "2U rack server optimized for virtualization",
+    "specifications": {
+      "cpu": "2x Intel Xeon Gold 6230R (2.1GHz, 26-core)",
+      "ram": "128GB DDR4 ECC",
+      "storage": "4x 960GB SSD NVMe",
+      "network": "4x 1GbE + 2x 25GbE SFP28",
+      "powerSupply": "2x 800W redundant PSU"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 520,
+    "price": 12000,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "srv-003",
+    "name": "Supermicro SuperServer 1029P",
+    "type": "SERVER",
+    "manufacturer": "Supermicro",
+    "model": "SuperServer 1029P-WTR",
+    "description": "1U high-density server for web hosting",
+    "specifications": {
+      "cpu": "2x Intel Xeon Silver 4208 (2.1GHz, 8-core)",
+      "ram": "32GB DDR4 ECC",
+      "storage": "2x 480GB SSD + 2x 1TB HDD",
+      "network": "2x 1GbE + 2x 10GbE SFP+",
+      "powerSupply": "1x 600W PSU"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 280,
+    "price": 4500,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "srv-004",
+    "name": "IBM Power System S922",
+    "type": "SERVER",
+    "manufacturer": "IBM",
+    "model": "Power System S922",
+    "description": "2U POWER9 server for mission-critical workloads",
+    "specifications": {
+      "cpu": "2x IBM POWER9 (3.8GHz, 8-core)",
+      "ram": "256GB DDR4 ECC",
+      "storage": "4x 1.92TB SSD NVMe",
+      "network": "4x 1GbE + 2x 25GbE SFP28",
+      "powerSupply": "2x 900W redundant PSU"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 650,
+    "price": 25000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "srv-005",
+    "name": "Lenovo ThinkSystem SR650",
+    "type": "SERVER",
+    "manufacturer": "Lenovo",
+    "model": "ThinkSystem SR650",
+    "description": "2U server with balanced performance and efficiency",
+    "specifications": {
+      "cpu": "2x Intel Xeon Gold 5218R (2.1GHz, 20-core)",
+      "ram": "96GB DDR4 ECC",
+      "storage": "2x 800GB SSD + 6x 1.2TB SAS HDD",
+      "network": "4x 1GbE + 2x 10GbE SFP+",
+      "powerSupply": "2x 750W redundant PSU"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 480,
+    "price": 9800,
+    "availability": true,
+    "category": "enterprise"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "fw-001",
+    "name": "Palo Alto PA-3220",
+    "type": "FIREWALL",
+    "manufacturer": "Palo Alto Networks",
+    "model": "PA-3220",
+    "description": "Next-generation firewall for medium enterprises",
+    "specifications": {
+      "throughput": "2.9 Gbps firewall, 1.5 Gbps threat prevention",
+      "interfaces": "16x GbE + 4x SFP",
+      "sessions": "500K concurrent sessions",
+      "vpn_tunnels": "2500 IPsec tunnels",
+      "features": "App-ID, User-ID, Content-ID, WildFire, SSL decryption"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 95,
+    "price": 8500,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "fw-002",
+    "name": "Fortinet FortiGate 600E",
+    "type": "FIREWALL",
+    "manufacturer": "Fortinet",
+    "model": "FortiGate 600E",
+    "description": "High-performance security appliance with SD-WAN",
+    "specifications": {
+      "throughput": "10 Gbps firewall, 2.8 Gbps IPS",
+      "interfaces": "16x GbE + 8x SFP + 2x 10GbE SFP+",
+      "sessions": "2M concurrent sessions",
+      "vpn_tunnels": "10000 IPsec tunnels",
+      "features": "FortiOS, SD-WAN, SSL inspection, sandboxing"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 120,
+    "price": 12000,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "fw-003",
+    "name": "Cisco ASA 5516-X",
+    "type": "FIREWALL",
+    "manufacturer": "Cisco",
+    "model": "ASA 5516-X",
+    "description": "Adaptive security appliance with FirePOWER services",
+    "specifications": {
+      "throughput": "1.2 Gbps firewall, 750 Mbps IPS",
+      "interfaces": "8x GbE + 1x Management",
+      "sessions": "250K concurrent sessions",
+      "vpn_tunnels": "750 IPsec tunnels",
+      "features": "ASA OS, FirePOWER, AnyConnect, clustering"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 85,
+    "price": 6500,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "fw-004",
+    "name": "Check Point 15600",
+    "type": "FIREWALL",
+    "manufacturer": "Check Point",
+    "model": "15600",
+    "description": "High-end security gateway for large enterprises",
+    "specifications": {
+      "throughput": "40 Gbps firewall, 20 Gbps threat prevention",
+      "interfaces": "8x 10GbE SFP+ + 2x 40GbE QSFP+",
+      "sessions": "9M concurrent sessions",
+      "vpn_tunnels": "20000 IPsec tunnels",
+      "features": "Gaia OS, SandBlast, Mobile Access, clustering"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 280,
+    "price": 35000,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "fw-005",
+    "name": "SonicWall NSa 6650",
+    "type": "FIREWALL",
+    "manufacturer": "SonicWall",
+    "model": "NSa 6650",
+    "description": "Mid-range firewall with advanced threat protection",
+    "specifications": {
+      "throughput": "3.5 Gbps firewall, 1.7 Gbps IPS",
+      "interfaces": "8x GbE + 8x SFP + 2x 10GbE SFP+",
+      "sessions": "500K concurrent sessions",
+      "vpn_tunnels": "2000 IPsec tunnels",
+      "features": "SonicOS, Capture ATP, SSL DPI, SD-WAN"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 110,
+    "price": 4800,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "fw-006",
+    "name": "Juniper SRX4600",
+    "type": "FIREWALL",
+    "manufacturer": "Juniper",
+    "model": "SRX4600",
+    "description": "Services gateway with advanced security and routing",
+    "specifications": {
+      "throughput": "40 Gbps firewall, 20 Gbps IPS",
+      "interfaces": "16x GbE + 4x 10GbE SFP+ + 2x 40GbE QSFP+",
+      "sessions": "4M concurrent sessions",
+      "vpn_tunnels": "8000 IPsec tunnels",
+      "features": "Junos OS, Sky ATP, SSL Proxy, AppSecure"
+    },
+    "rackUnits": 1,
+    "powerConsumption": 250,
+    "price": 28000,
+    "availability": true,
+    "category": "premium"
+  }
+]

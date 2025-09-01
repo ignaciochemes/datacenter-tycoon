@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ups-001",
+    "name": "APC Smart-UPS SRT 5000VA",
+    "type": "UPS",
+    "manufacturer": "APC by Schneider Electric",
+    "model": "SRT5KRMXLT",
+    "description": "Double-conversion online UPS with LCD display",
+    "specifications": {
+      "capacity": "5000VA / 4500W",
+      "runtime": "6.7 min at full load, 19.7 min at half load",
+      "input_voltage": "160-280V",
+      "output_voltage": "230V ±3%",
+      "features": "Hot-swappable batteries, network management, LCD"
+    },
+    "rackUnits": 3,
+    "powerConsumption": 0,
+    "price": 2800,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "ups-002",
+    "name": "Eaton 9PX 6000i RT3U",
+    "type": "UPS",
+    "manufacturer": "Eaton",
+    "model": "9PX6KiRT3U",
+    "description": "Double-conversion UPS with energy efficiency",
+    "specifications": {
+      "capacity": "6000VA / 5400W",
+      "runtime": "5.4 min at full load, 13.7 min at half load",
+      "input_voltage": "160-294V",
+      "output_voltage": "230V ±1%",
+      "features": "Energy Star certified, graphical LCD, ABM technology"
+    },
+    "rackUnits": 3,
+    "powerConsumption": 0,
+    "price": 3200,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "ups-003",
+    "name": "Vertiv Liebert GXT5 10000VA",
+    "type": "UPS",
+    "manufacturer": "Vertiv",
+    "model": "GXT5-10000IRT3UXLN",
+    "description": "Online double-conversion UPS for critical applications",
+    "specifications": {
+      "capacity": "10000VA / 9000W",
+      "runtime": "4.2 min at full load, 11.8 min at half load",
+      "input_voltage": "176-276V",
+      "output_voltage": "230V ±1%",
+      "features": "Unity power factor, hot-swappable batteries, SNMP"
+    },
+    "rackUnits": 3,
+    "powerConsumption": 0,
+    "price": 4500,
+    "availability": true,
+    "category": "enterprise"
+  },
+  {
+    "id": "ups-004",
+    "name": "CyberPower PR3000ERTXL2U",
+    "type": "UPS",
+    "manufacturer": "CyberPower",
+    "model": "PR3000ERTXL2U",
+    "description": "Smart App Sinewave UPS with extended runtime",
+    "specifications": {
+      "capacity": "3000VA / 2700W",
+      "runtime": "9 min at full load, 25 min at half load",
+      "input_voltage": "160-300V",
+      "output_voltage": "230V ±5%",
+      "features": "Pure sine wave, LCD panel, PowerPanel software"
+    },
+    "rackUnits": 2,
+    "powerConsumption": 0,
+    "price": 1200,
+    "availability": true,
+    "category": "standard"
+  },
+  {
+    "id": "ups-005",
+    "name": "Riello UPS Sentinel Dual SDU 20K",
+    "type": "UPS",
+    "manufacturer": "Riello UPS",
+    "model": "SDU 20K",
+    "description": "Transformerless double-conversion UPS",
+    "specifications": {
+      "capacity": "20000VA / 18000W",
+      "runtime": "3.5 min at full load, 9.2 min at half load",
+      "input_voltage": "176-276V",
+      "output_voltage": "230V ±1%",
+      "features": "DSP control, parallel operation, remote monitoring"
+    },
+    "rackUnits": 4,
+    "powerConsumption": 0,
+    "price": 8500,
+    "availability": true,
+    "category": "premium"
+  },
+  {
+    "id": "ups-006",
+    "name": "Tripp Lite SU30K3/3",
+    "type": "UPS",
+    "manufacturer": "Tripp Lite",
+    "model": "SU30K3/3",
+    "description": "SmartOnline double-conversion UPS system",
+    "specifications": {
+      "capacity": "30000VA / 24000W",
+      "runtime": "2.8 min at full load, 7.5 min at half load",
+      "input_voltage": "180-276V",
+      "output_voltage": "230V ±2%",
+      "features": "N+1 redundancy ready, SNMP/HTTP, parallel capable"
+    },
+    "rackUnits": 6,
+    "powerConsumption": 0,
+    "price": 12000,
+    "availability": true,
+    "category": "premium"
+  }
+]
