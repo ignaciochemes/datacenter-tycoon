@@ -1,90 +1,146 @@
 # Datacenter Tycoon
 
-A full-stack datacenter management simulation game built with NestJS and Next.js in a monorepo structure.
+🏢 A comprehensive datacenter simulation game built with modern web technologies.
 
-## Project Structure
+[![GitHub Repository](https://img.shields.io/badge/GitHub-datacenter--tycoon-blue?logo=github)](https://github.com/ignaciochemes/datacenter-tycoon)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![PNPM](https://img.shields.io/badge/PNPM-8+-orange.svg)](https://pnpm.io/)
+
+## 🚀 Project Overview
+
+Datacenter Tycoon is an immersive simulation game where players build, manage, and optimize their own datacenter empire. This monorepo contains both the frontend and backend applications, providing a complete full-stack gaming experience.
+
+## 📁 Project Structure
 
 ```
 datacenter-tycoon/
-├── datacenter-tycoon-api/     # Backend API (NestJS)
-├── datacenter-tycoon-front/   # Frontend App (Next.js)
-├── packages/                  # Shared packages
-├── pnpm-workspace.yaml       # PNPM workspace configuration
-├── turbo.json                # Turborepo configuration
-└── package.json              # Root package.json
+├── datacenter-tycoon-front/     # React/Next.js frontend application
+├── datacenter-tycoon-api/       # NestJS backend API
+├── docs/                        # Project documentation
+├── docker-compose.yml           # Multi-service orchestration
+├── package.json                 # Root package configuration
+├── pnpm-workspace.yaml          # PNPM workspace configuration
+├── turbo.json                   # Turborepo build configuration
+└── README.md                    # This file
 ```
 
-## Tech Stack
+## ⚡ Quick Start
 
-### Backend (datacenter-tycoon-api)
-- **Framework**: NestJS
-- **Database**: PostgreSQL with TypeORM
-- **Authentication**: JWT
-- **Real-time**: WebSockets with Socket.IO
-- **Queue**: BullMQ with Redis
-- **Documentation**: Swagger/OpenAPI
+### Prerequisites
 
-### Frontend (datacenter-tycoon-front)
-- **Framework**: Next.js 15 with Turbopack
-- **UI**: Tailwind CSS + shadcn/ui
-- **Language**: TypeScript
-- **Styling**: PostCSS
+- **Node.js** 18 or higher
+- **PNPM** 8 or higher
+- **Docker** (optional, for containerized development)
+- **PostgreSQL** (for database)
 
-## Prerequisites
-
-- Node.js >= 18.0.0
-- PNPM >= 8.0.0
-- PostgreSQL
-- Redis
-- Docker (optional)
-
-## Quick Start
-
-### 1. Install Dependencies
+### Installation
 
 ```bash
-# Install PNPM globally if not already installed
-npm install -g pnpm
+# Clone the repository
+git clone https://github.com/ignaciochemes/datacenter-tycoon.git
+cd datacenter-tycoon
 
 # Install all dependencies
 pnpm install
 ```
 
-### 2. Environment Setup
+### Development
 
 ```bash
-# Copy environment files
-cp datacenter-tycoon-api/.env-example datacenter-tycoon-api/.env
-```
-
-Update the `.env` file with your database and Redis configuration.
-
-### 3. Database Setup
-
-```bash
-# Start PostgreSQL and Redis (using Docker)
-pnpm docker:up
-
-# Run database migrations
-pnpm api:typeorm migration:run
-```
-
-### 4. Development
-
-```bash
-# Start both frontend and backend in development mode
+# Start all services in development mode
 pnpm dev
 
-# Or start individually
-pnpm api:dev    # Backend only
-pnpm front:dev  # Frontend only
+# Or start services individually
+pnpm --filter datacenter-tycoon-front dev
+pnpm --filter datacenter-tycoon-api dev
 ```
 
-### 5. Access the Application
+### Building
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:33000
-- **API Documentation**: http://localhost:33000/api-docs
+```bash
+# Build all projects
+pnpm build
+
+# Build specific project
+pnpm --filter datacenter-tycoon-front build
+pnpm --filter datacenter-tycoon-api build
+```
+
+### Docker Development
+
+```bash
+# Start all services with Docker Compose
+docker-compose up -d
+```
+
+## 🏗️ Architecture
+
+### Frontend (`datacenter-tycoon-front`)
+- **Framework**: Next.js 15 with React 19
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Authentication**: Auth0 integration with hybrid auth system
+- **State Management**: React Context API
+- **Type Safety**: TypeScript
+- **UI Components**: Modern, responsive design system
+
+### Backend (`datacenter-tycoon-api`)
+- **Framework**: NestJS with Express
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: JWT with Auth0 integration
+- **API**: RESTful endpoints with OpenAPI documentation
+- **Type Safety**: TypeScript
+- **Architecture**: Modular, scalable design
+
+## ✨ Features
+
+- 🏢 **Datacenter Simulation**: Build and manage virtual datacenters
+- 👤 **User Management**: Secure authentication and user profiles
+- 🎮 **Interactive Gameplay**: Engaging game mechanics and progression
+- 📊 **Real-time Analytics**: Live statistics and performance monitoring
+- 🔒 **Security**: JWT-based authentication with Auth0 integration
+- 🎨 **Modern UI**: Responsive design with beautiful components
+- 🚀 **Performance**: Optimized for speed and scalability
+
+## 🛠️ Development Tools
+
+- **Package Manager**: PNPM with workspaces
+- **Build System**: Turborepo for efficient monorepo builds
+- **Code Quality**: ESLint, Prettier
+- **Type Checking**: TypeScript across all projects
+- **Containerization**: Docker and Docker Compose
+- **Documentation**: Comprehensive docs and API documentation
+
+## 📚 Documentation
+
+- [Monorepo Migration Guide](docs/MONOREPO_MIGRATION.md)
+- [OAuth Integration Status](datacenter-tycoon-front/docs/OAUTH_INTEGRATION_STATUS.md)
+- [API Documentation](datacenter-tycoon-api/README.md)
+- [Frontend Setup](datacenter-tycoon-front/README.md)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests and linting (`pnpm test && pnpm lint`)
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- **Repository**: https://github.com/ignaciochemes/datacenter-tycoon
+- **Issues**: https://github.com/ignaciochemes/datacenter-tycoon/issues
+- **Discussions**: https://github.com/ignaciochemes/datacenter-tycoon/discussions
+
+---
+
+**Built with ❤️ by the Datacenter Tycoon Team**
 
 ## Available Scripts
 
